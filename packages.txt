@@ -26,3 +26,4 @@ libbsd
 tuxguitar
 dconf-editor
 gnome-tweaks
+gstreamer1-plugin-openh264
