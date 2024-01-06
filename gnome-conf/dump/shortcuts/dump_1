@@ -1,6 +1,6 @@
 [/]
 control-center=['<Shift><Super>x']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
 home=['<Shift><Super>r']
 screensaver=['<Shift><Super>slash']
 
@@ -18,3 +18,13 @@ name='open alacritty'
 binding='<Shift><Super>f'
 command='firefox'
 name='open firefox'
+
+[custom-keybindings/custom3]
+binding='<Shift><Super>c'
+command='/usr/local/bin/postman'
+name='open postman'
+
+[custom-keybindings/custom4]
+binding='<Shift><Super>g'
+command='google-chrome-stable'
+name='open google-chrome'
