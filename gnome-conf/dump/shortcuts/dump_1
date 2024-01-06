@@ -1,0 +1,20 @@
+[/]
+control-center=['<Shift><Super>x']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+home=['<Shift><Super>r']
+screensaver=['<Shift><Super>slash']
+
+[custom-keybindings/custom0]
+binding='<Shift><Super>z'
+command='keepassxc'
+name='open keepassxc'
+
+[custom-keybindings/custom1]
+binding='<Super>Return'
+command='alacritty'
+name='open alacritty'
+
+[custom-keybindings/custom2]
+binding='<Shift><Super>f'
+command='firefox'
+name='open firefox'
