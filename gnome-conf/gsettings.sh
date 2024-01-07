@@ -10,6 +10,9 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"
 # set touchpad
 cat dump/touchpad | dconf load /org/gnome/desktop/peripherals/touchpad/
 
+# diable animations and hot corners
+cat dump/interface | dconf load /org/gnome/desktop/interface/
+
 # disable dynamic workspaces and fixed to 4
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 4
