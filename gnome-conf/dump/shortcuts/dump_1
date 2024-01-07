@@ -1,6 +1,6 @@
 [/]
 control-center=['<Shift><Super>x']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/']
 home=['<Shift><Super>r']
 screensaver=['<Shift><Super>slash']
 
@@ -28,3 +28,8 @@ name='open postman'
 binding='<Shift><Super>g'
 command='google-chrome-stable'
 name='open google-chrome'
+
+[custom-keybindings/custom5]
+binding='<Shift><Super>b'
+command='telegram-desktop '
+name='open telegram'
