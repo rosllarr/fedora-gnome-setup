@@ -22,3 +22,6 @@ gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', '
 
 # set switch layout (shift first follow by alt)
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
+
+# set window focus when mouse hover
+cat dump/prefrences | dconf load /org/gnome/desktop/wm/preferences/
