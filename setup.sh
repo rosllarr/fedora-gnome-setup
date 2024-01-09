@@ -197,6 +197,11 @@ if [ ! -f /etc/systemd/system/disable-pcspkr.service ]; then
 	sudo systemctl enable --now disable-pcspkr.service
 fi
 
+###############
+# tmux config #
+###############
+cp $home_skel/.tmux.conf $HOME/.tmux.conf
+
 ##############################
 # install Node (lasted step) #
 ##############################
