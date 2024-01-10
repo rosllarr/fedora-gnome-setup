@@ -1,5 +1,5 @@
 [/]
-auto-raise=false
+auto-raise=true
 focus-mode='sloppy'
 mouse-button-modifier='<Super>'
 num-workspaces=4

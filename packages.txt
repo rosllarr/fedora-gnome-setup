@@ -29,3 +29,4 @@ gnome-tweaks
 gstreamer1-plugin-openh264
 discord
 tmux
+gstreamer1-plugins-bad-free-extras

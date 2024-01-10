@@ -202,6 +202,11 @@ fi
 ###############
 cp $home_skel/.tmux.conf $HOME/.tmux.conf
 
+##################
+# discord config #
+##################
+cp $home_skel/.config/discord/settings.json $HOME/.config/discord/settings.json
+
 ##############################
 # install Node (lasted step) #
 ##############################
