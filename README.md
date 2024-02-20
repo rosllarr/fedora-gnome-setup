@@ -28,6 +28,10 @@ install
 - cargo
 - mupdf
 - zathura-pdf-mupdf
+- @c-development
+- @fonts
+- @virtualization
+- vagrant
 
 cargo_packages
 - joshuto
