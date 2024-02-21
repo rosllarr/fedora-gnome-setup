@@ -32,6 +32,8 @@ install
 - @fonts
 - @virtualization
 - vagrant
+<!-- ePub reader -->
+- foliate
 
 cargo_packages
 - joshuto

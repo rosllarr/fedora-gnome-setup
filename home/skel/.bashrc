@@ -23,8 +23,12 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
+# Cargo binary path
 . "$HOME/.cargo/env"
 
+# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# fnm
 eval "$(fnm env --use-on-cd)"
