@@ -26,8 +26,8 @@ install
 - youtube-dl
 - btop
 - cargo
-- mupdf
-- zathura-pdf-mupdf
+<!-- - mupdf
+- zathura-pdf-mupdf -->
 - @c-development
 - @fonts
 - @virtualization

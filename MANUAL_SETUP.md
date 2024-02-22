@@ -106,6 +106,15 @@ bash ~/.nerd-fonts/install.sh
 sudo dnf install foliate btop youtube-dl tuxguitar vlc -y
 ```
 
+### Install google chrome
+```bash
+# enable repo
+sudo dnf install fedora-workstation-repositories -y
+sudo dnf config-manager --set-enabled google-chrome
+# install
+sudo dnf insatll -y google-chrome-stable
+```
+
 ### Reboot
 ```bash
 reboot
