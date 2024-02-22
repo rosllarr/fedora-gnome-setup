@@ -24,6 +24,8 @@ View split on right = Super+D
 [Custom Shortcuts]
 keepassxc = Super+Shift+Z
 alacritty = Super+Return
+[System]
+logscreen = Super+Shift+/
 
 ### Enable RPM fusion
 ```bash
