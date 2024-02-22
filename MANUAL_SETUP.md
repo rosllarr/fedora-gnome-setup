@@ -21,9 +21,10 @@ Restore window = Super+E
 Toggle fullscreen mode = Super+Z
 View split on left = Super+A
 View split on right = Super+D
-[Custom Shortcuts]
+[CustomShortcuts]
 keepassxc = Super+Shift+Z
 alacritty = Super+Return
+google-chrome = Super+Shift+G
 [System]
 logscreen = Super+Shift+/
 
