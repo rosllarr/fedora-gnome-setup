@@ -25,6 +25,7 @@ View split on right = Super+D
 keepassxc = Super+Shift+Z
 alacritty = Super+Return
 google-chrome = Super+Shift+G
+telegram = Super+Shift+B
 [System]
 logscreen = Super+Shift+/
 
@@ -114,6 +115,11 @@ sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled google-chrome
 # install
 sudo dnf insatll -y google-chrome-stable
+```
+
+### Install telegram
+```bash
+sudo dnf install -y telegram
 ```
 
 ### Reboot
