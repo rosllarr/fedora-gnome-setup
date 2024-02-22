@@ -78,6 +78,9 @@ bash ~/.fzf/install
 ### Install tools for make a project
 ```bash
 sudo dnf install -y @c-development @fonts @virtualization vagrant python3-pip python3-devel
+
+# install ghcup
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
 
 ### Start alacritty
@@ -98,7 +101,7 @@ bash ~/.nerd-fonts/install.sh
 
 ### Install utilities software
 ```bash
-sudo dnf install foliate btop youtube-dl tuxguitar -y
+sudo dnf install foliate btop youtube-dl tuxguitar vlc -y
 ```
 
 ### Reboot
