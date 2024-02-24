@@ -29,11 +29,13 @@ Settings = Super+`
 [Navigation]
 Switch_to_workspace_1-4 = Super+[1..4]
 Move_window_to_workspace_1-4 = Shift+Super+[1..4]
+[System]
+logscreen = Super+Shift+/
 [Windows]
 Close_window = Shift+Super+Q
+Lower_window_below_other_windows = Super+Q
 Maximize_window = Super+W
 Raise_window_above_other_windows = Super+S
-Lower_window_below_other_windows = Super+Q
 Restore_window = Super+E
 Toggle_fullscreen_mode = Super+Z
 View_split_on_left = Super+A
@@ -43,8 +45,6 @@ keepassxc = Super+Shift+Z
 alacritty = Super+Return
 google-chrome = Super+Shift+G
 telegram-desktop = Super+Shift+B
-[System]
-logscreen = Super+Shift+/
 ```
 
 ### Additional step for press grave key without FN (on 60% keyboard)
@@ -104,7 +104,7 @@ sudo dnf copr enable atim/alacritty -y
 sudo dnf install -y alacritty fish tmux cargo
 
 # install rust terminal utility
-cargo install bat eza ripgrep zoxide fnm
+cargo install bat eza ripgrep zoxide fnm neovim
 cargo install joshuto --version 0.9.4
 
 # install fzf
@@ -115,10 +115,16 @@ bash ~/.fzf/install
 mkdir -p ~/.config/{alacritty,discord,fish}
 cp -a home/skel/.config/alacritty ~/.config/
 cp -a home/skel/.config/discord ~/.config/
-cp -a home/skel/.config/fish ~/.config/
+cp -a home/skel/.config/fish/functions/* ~/.config/fish/functions/
+cp -a home/skel/.config/fish/config.fish ~/.config/fish/
+cp -a home/skel/.config/fish/fish_variables ~/.config/fish/
 cp home/skel/.bashrc ~
 cp home/skel/.node-version ~
 cp home/skel/.tmux.conf ~
+
+# clone alacritty themes
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
 # [start alacritty]
 # run follow commands
@@ -129,6 +135,9 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 # install plugins
 omf install bang-bang
 omf install clearance
+
+# install fisher
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
 
 ### Install nerd fonts
@@ -144,11 +153,13 @@ sudo dnf install -y @c-development @fonts @virtualization vagrant python3-pip py
 
 # ghcup for haskell project
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+# integrate with fish shell
+fisher install halostatue/fish-haskell@v2.1.0
 ```
 
 ### Install utilities software
 ```bash
-sudo dnf install foliate btop youtube-dl tuxguitar vlc xev -y
+sudo dnf install -y foliate btop youtube-dl tuxguitar vlc xev
 ```
 
 ### Install tools for work
@@ -158,10 +169,22 @@ sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled google-chrome
 
 # install nessary softwares
-sudo dnf install -y google-chrome-stable telegram, openfortivpn
+sudo dnf install -y google-chrome-stable telegram openfortivpn
+```
+
+### copy script to /usr/local/bin
+```bash
+sudo cp -a etc/skel/usr/local/bin/* /usr/local/bin/
+```
+
+### disable beep
+```bash
+sudo cp etc/skel/systemd/system/disable-pcspkr.service /etc/systemd/system/disable-pcspkr.service
+sudo systemctl enable --now disable-pcspkr.service
 ```
 
 ### Reboot the system
 ```bash
 reboot
 ```
+gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl

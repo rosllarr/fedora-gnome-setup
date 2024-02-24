@@ -25,10 +25,13 @@ fi
 unset rc
 
 # Cargo binary path
-. "$HOME/.cargo/env"
+export PATH=$HOME/.cargo/bin:$PATH
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# ghcup-env
+[ -f "/home/tie/.ghcup/env" ] && source "/home/tie/.ghcup/env"
+
 # fnm
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
