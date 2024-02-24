@@ -1,3 +1,13 @@
+### Install vscode
+```bash
+# download from https://code.visualstudio.com/download
+
+# install with 
+rpm -ivh code-*.rpm
+
+# import profile from vscode_profile/base.code-profile
+```
+
 ### Enable RPM fusion
 ```bash
 	sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -35,6 +45,17 @@ google-chrome = Super+Shift+G
 telegram-desktop = Super+Shift+B
 [System]
 logscreen = Super+Shift+/
+```
+
+### Additional step for press grave key without FN (on 60% keyboard)
+```bash
+# copy custom keycode
+cp -a home/skel/.config/xkb $HOME/.config/
+```
+Navigate to [Tweaks->Keyboard->"Additional Layout Options"]
+```toml
+[Miscellaneous_options]
+Esc_to_grave = True
 ```
 
 ### Set mouse behavor
@@ -127,7 +148,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
 ### Install utilities software
 ```bash
-sudo dnf install foliate btop youtube-dl tuxguitar vlc -y
+sudo dnf install foliate btop youtube-dl tuxguitar vlc xev -y
 ```
 
 ### Install tools for work

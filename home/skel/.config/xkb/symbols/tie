@@ -1,0 +1,6 @@
+default partial alphanumeric_keys 
+xkb_symbols "esc_grave" {
+    name[Group1]= "esc_grave - Linux";
+
+    key <ESC> {[   grave,	 asciitilde	]};
+};
