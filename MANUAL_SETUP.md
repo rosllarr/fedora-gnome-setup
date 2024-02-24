@@ -117,9 +117,9 @@ sudo dnf config-manager --set-enabled google-chrome
 sudo dnf insatll -y google-chrome-stable
 ```
 
-### Install telegram
+### Install work
 ```bash
-sudo dnf install -y telegram
+sudo dnf install -y telegram, openfortivpn
 ```
 
 ### Reboot
