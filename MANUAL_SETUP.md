@@ -151,6 +151,8 @@ bash ~/.nerd-fonts/install.sh
 # tool for make environments
 sudo dnf install -y @c-development @fonts @virtualization vagrant python3-pip python3-devel
 
+# install ghci dep package
+sudo dnf install -y gmp-devel
 # ghcup for haskell project
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 # integrate haskell with fish shell
