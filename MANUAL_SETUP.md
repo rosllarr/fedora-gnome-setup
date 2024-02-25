@@ -101,10 +101,10 @@ sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/sh
 sudo dnf copr enable atim/alacritty -y
 
 # install nessary softwares 
-sudo dnf install -y alacritty fish tmux cargo
+sudo dnf install -y alacritty fish tmux cargo neovim
 
 # install rust terminal utility
-cargo install bat eza ripgrep zoxide fnm neovim
+cargo install bat eza ripgrep zoxide fnm
 cargo install joshuto --version 0.9.4
 
 # install fzf
@@ -153,7 +153,7 @@ sudo dnf install -y @c-development @fonts @virtualization vagrant python3-pip py
 
 # ghcup for haskell project
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-# integrate with fish shell
+# integrate haskell with fish shell
 fisher install halostatue/fish-haskell@v2.1.0
 ```
 
