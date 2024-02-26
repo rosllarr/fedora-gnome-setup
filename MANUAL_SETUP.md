@@ -45,6 +45,7 @@ keepassxc = Super+Shift+Z
 alacritty = Super+Return
 google-chrome = Super+Shift+G
 telegram-desktop = Super+Shift+B
+gnome-tweaks = Super+Shift+`
 ```
 
 ### Additional step for press grave key without FN (on 60% keyboard)
@@ -58,6 +59,13 @@ Navigate to [Tweaks->Keyboard->"Additional Layout Options"]
 Esc_to_grave = True
 ```
 
+### Make capslock as additional Esc
+Navigate to [Tweaks -> Keyboard]
+```toml
+[Additional Layout Options]
+Make_Caps_Lock_an_additional_Esc = True
+```
+
 ### Set mouse behavor
 Navigate to [Tweaks -> Windows]
 ```toml
@@ -65,21 +73,17 @@ Navigate to [Tweaks -> Windows]
 Resize_with_Secondary-Click = True
 [Focusing]
 Focus_on_Hover = True
+Raise_Windows_When_Focused = True
 ```
 
 ### Set touchpad behavor
 Navigate to 
 [Settings -> Mouse & Touchpad -> Touchpad]
 ```toml
+[Clicking]
+Tap_to_Click = True
 [ScrollDirection]
 Traditional = True
-```
-
-### Make capslock as additional Esc
-Navigate to [Tweaks -> Keyboard]
-```toml
-[Additional Layout Options]
-Make_Caps_Lock_an_additional_Esc = True
 ```
 
 ### Set window and workspace behavor
@@ -161,7 +165,7 @@ fisher install halostatue/fish-haskell@v2.1.0
 
 ### Install utilities software
 ```bash
-sudo dnf install -y foliate btop youtube-dl tuxguitar vlc xev
+sudo dnf install -y foliate btop youtube-dl tuxguitar vlc xev wev
 ```
 
 ### Install tools for work
@@ -189,4 +193,3 @@ sudo systemctl enable --now disable-pcspkr.service
 ```bash
 reboot
 ```
-gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
