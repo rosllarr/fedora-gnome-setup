@@ -14,6 +14,11 @@ rpm -ivh code-*.rpm
     sudo dnf install -y dnf-plugins-core
 ```
 
+### Setup flathub
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo --user
+```
+
 ### Install nessaries software and gnome tools
 ```bash
 sudo dnf install -y git keepassxc dconf-editor gnome-tweaks gstreamer1-plugins-bad-free-extras gstreamer1-plugin-openh264
@@ -27,16 +32,17 @@ Home_folder = Shift+Super+R
 Launch_web_browser = Shift+Super+F
 Settings = Super+`
 [Navigation]
-Switch_to_workspace_1-4 = Super+[1..4]
 Move_window_to_workspace_1-4 = Shift+Super+[1..4]
+Switch_applications = Super+Tab
+Switch_to_workspace_1-4 = Super+[1..4]
+Switch_windows_of_an_application = Alt+Tab
 [System]
 logscreen = Super+Shift+/
 [Windows]
 Close_window = Shift+Super+Q
-Lower_window_below_other_windows = Super+Q
+Hide_window = Super+Q
 Maximize_window = Super+W
-Raise_window_above_other_windows = Super+S
-Restore_window = Super+E
+Restore_window = Super+S
 Toggle_fullscreen_mode = Super+Z
 View_split_on_left = Super+A
 View_split_on_right = Super+D
@@ -44,7 +50,8 @@ View_split_on_right = Super+D
 keepassxc = Super+Shift+Z
 alacritty = Super+Return
 google-chrome = Super+Shift+G
-telegram-desktop = Super+Shift+B
+Insomnia = flatpak run rest.insomnia.Insomnia = Super+Shift+C
+telegram-desktop = flatpak run org.telegram.desktop = Super+Shift+B
 gnome-tweaks = Super+Shift+`
 ```
 
@@ -72,8 +79,7 @@ Navigate to [Tweaks -> Windows]
 [ClickActions]
 Resize_with_Secondary-Click = True
 [Focusing]
-Focus_on_Hover = True
-Raise_Windows_When_Focused = True
+Click to Focus = True
 ```
 
 ### Set touchpad behavor
@@ -96,6 +102,12 @@ Fixed_number_of_workerspaces = True
 Number_of_Workspaces = 4
 [Multi-Monitor]
 Workspaces_on_all_displays = True
+```
+
+### Remove switch workspace left/right for prevent duplicate key with vscode
+```bash
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['']"
 ```
 
 ### Setup shell
@@ -175,7 +187,13 @@ sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled google-chrome
 
 # install nessary softwares
-sudo dnf install -y google-chrome-stable telegram openfortivpn
+sudo dnf install -y google-chrome-stable openfortivpn
+
+# install telegram
+flatpak install flathub org.telegram.desktop --user
+
+# install Insomnia
+flatpak install flathub rest.insomnia.Insomnia
 ```
 
 ### copy script to /usr/local/bin
