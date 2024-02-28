@@ -53,6 +53,7 @@ google-chrome = Super+Shift+G
 Insomnia = flatpak run rest.insomnia.Insomnia = Super+Shift+C
 telegram-desktop = flatpak run org.telegram.desktop = Super+Shift+B
 gnome-tweaks = Super+Shift+`
+discord = flatpak run com.discordapp.Discord = Super+Shift+X
 ```
 
 ### Additional step for press grave key without FN (on 60% keyboard)
@@ -193,7 +194,10 @@ sudo dnf install -y google-chrome-stable openfortivpn
 flatpak install flathub org.telegram.desktop --user
 
 # install Insomnia
-flatpak install flathub rest.insomnia.Insomnia
+flatpak install flathub rest.insomnia.Insomnia --user
+
+# install discord
+flatpak install flathub com.discordapp.Discord --user
 ```
 
 ### copy script to /usr/local/bin
