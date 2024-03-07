@@ -41,8 +41,9 @@ logscreen = Super+Shift+/
 [Windows]
 Close_window = Shift+Super+Q
 Hide_window = Super+Q
+Lower window below other windows = Super+S
 Maximize_window = Super+W
-Restore_window = Super+S
+Restore_window = Super+E
 Toggle_fullscreen_mode = Super+Z
 View_split_on_left = Super+A
 View_split_on_right = Super+D
@@ -135,6 +136,7 @@ cp -a home/skel/.config/discord ~/.config/
 cp -a home/skel/.config/fish/functions/* ~/.config/fish/functions/
 cp -a home/skel/.config/fish/config.fish ~/.config/fish/
 cp -a home/skel/.config/fish/fish_variables ~/.config/fish/
+cp -a home/skel/.config/fish/conf.d/* ~/.config/fish/conf.d/
 cp home/skel/.bashrc ~
 cp home/skel/.node-version ~
 cp home/skel/.tmux.conf ~
