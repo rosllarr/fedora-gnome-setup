@@ -211,6 +211,20 @@ sudo cp etc/skel/systemd/system/disable-pcspkr.service /etc/systemd/system/disab
 sudo systemctl enable --now disable-pcspkr.service
 ```
 
+### install docker
+```bash
+sudo dnf remove -y docker-podman
+
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo systemctl enable --now docker
+sudo systemctl enable --now containerd
+sudo usermod -aG docker $USER
+newgrp docker
+docker run hello-world
+```
+
 ### Reboot the system
 ```bash
 reboot
