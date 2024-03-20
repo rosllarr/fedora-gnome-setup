@@ -190,7 +190,7 @@ sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled google-chrome
 
 # install nessary softwares
-sudo dnf install -y google-chrome-stable openfortivpn
+sudo dnf install -y google-chrome-stable openfortivpn nmap
 
 # install telegram
 flatpak install flathub org.telegram.desktop --user
